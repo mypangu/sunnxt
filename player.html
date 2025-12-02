@@ -37,7 +37,6 @@
             height: 100%;
         }
 
-        /* Loading Screen */
         .loading-screen {
             position: absolute;
             top: 0;
@@ -78,7 +77,6 @@
             color: rgba(255, 255, 255, 0.7);
         }
 
-        /* Top Bar */
         .top-bar {
             position: fixed;
             top: 0;
@@ -127,7 +125,6 @@
             font-weight: 600;
         }
 
-        /* Bottom Controls */
         .bottom-controls {
             position: fixed;
             bottom: 0;
@@ -171,7 +168,6 @@
             transform: scale(1.1);
         }
 
-        /* Error Screen */
         .error-screen {
             position: absolute;
             top: 0;
@@ -235,7 +231,6 @@
             background: linear-gradient(135deg, #ff8080, #ffe066);
         }
 
-        /* Hide cursor when idle */
         body.hide-cursor,
         body.hide-cursor * {
             cursor: none !important;
@@ -270,13 +265,11 @@
 </head>
 <body>
     <div class="player-container">
-        <!-- Loading Screen -->
         <div class="loading-screen" id="loadingScreen">
             <div class="spinner"></div>
             <div class="loading-text">Loading channel...</div>
         </div>
 
-        <!-- Error Screen -->
         <div class="error-screen" id="errorScreen">
             <div class="error-icon">⚠️</div>
             <div class="error-title">Unable to load channel</div>
@@ -287,19 +280,16 @@
             </div>
         </div>
 
-        <!-- Top Bar -->
         <div class="top-bar" id="topBar">
             <button class="back-btn" id="backBtn">
                 <span>←</span> Back
             </button>
             <div class="channel-title" id="channelTitle">Loading...</div>
-            <div style="width: 100px;"></div> <!-- Spacer for centering -->
+            <div style="width: 100px;"></div>
         </div>
 
-        <!-- Player -->
         <div id="player"></div>
 
-        <!-- Bottom Controls -->
         <div class="bottom-controls" id="bottomControls">
             <button class="control-btn" id="playPauseBtn" title="Play/Pause">
                 <span id="playIcon">▶️</span>
@@ -318,24 +308,68 @@
         let currentChannel = null;
         let hideControlsTimeout = null;
 
-        // Get channel data from sessionStorage
-        function loadChannelData() {
-            const channelJson = sessionStorage.getItem('currentChannel');
-            if (!channelJson) {
-                const params = new URLSearchParams(window.location.search);
-                const id = params.get('id');
+        // Secret key for AES decryption (must match worker's SECRET_KEY)
+        const SECRET_KEY = 'PUSHPA1210SUBBU1501PURUSHOTH1005';
+
+        // AES-256-CBC Decryption
+        async function decryptData(encryptedText) {
+            try {
+                const [ivHex, encryptedHex] = encryptedText.split(':');
+                const iv = hexToBuffer(ivHex);
+                const encrypted = hexToBuffer(encryptedHex);
+
+                const key = new TextEncoder().encode(SECRET_KEY);
                 
-                // Fallback: if no session data, show error
-                if (!id) {
-                    showError('No channel data found');
-                    return null;
-                }
+                const cryptoKey = await crypto.subtle.importKey(
+                    'raw',
+                    key,
+                    { name: 'AES-CBC' },
+                    false,
+                    ['decrypt']
+                );
+
+                const decrypted = await crypto.subtle.decrypt(
+                    { name: 'AES-CBC', iv: iv },
+                    cryptoKey,
+                    encrypted
+                );
+
+                return new TextDecoder().decode(decrypted);
+            } catch (error) {
+                console.error('Decryption error:', error);
+                throw new Error('Failed to decrypt channel data');
             }
-            
-            return JSON.parse(channelJson);
         }
 
-        // Initialize player
+        function hexToBuffer(hex) {
+            const bytes = new Uint8Array(hex.length / 2);
+            for (let i = 0; i < hex.length; i += 2) {
+                bytes[i / 2] = parseInt(hex.substr(i, 2), 16);
+            }
+            return bytes;
+        }
+
+        // Fetch encrypted channel data and decrypt it
+        async function loadChannelData(channelId) {
+            try {
+                const response = await fetch(`/api/channel?id=${channelId}`);
+                if (!response.ok) {
+                    throw new Error('Failed to load channel data');
+                }
+                
+                const encryptedResponse = await response.json();
+                
+                // Decrypt the data
+                const decryptedJson = await decryptData(encryptedResponse.data);
+                const channel = JSON.parse(decryptedJson);
+                
+                return channel;
+            } catch (error) {
+                console.error('Error loading channel data:', error);
+                return null;
+            }
+        }
+
         function initializePlayer(channel) {
             showLoading();
             
@@ -361,9 +395,8 @@
                 stretch: true
             };
 
-            // Add DRM configuration if clearKeys exist in channel data
+            // Clearkeys are now decrypted from encrypted API response
             if (channel.clearkeys) {
-                console.log('Configuring DRM with clearKeys:', channel.clearkeys);
                 config.shakaConfiguration = {
                     drm: {
                         clearKeys: channel.clearkeys
@@ -377,11 +410,9 @@
             }
 
             player = new Clappr.Player(config);
-            
             setupPlayerEvents();
         }
 
-        // Setup player events
         function setupPlayerEvents() {
             player.on(Clappr.Events.PLAYER_PLAY, function() {
                 document.getElementById('playIcon').style.display = 'none';
@@ -395,7 +426,6 @@
             });
             
             player.on(Clappr.Events.PLAYER_READY, function() {
-                console.log('Player ready');
                 hideLoading();
             });
             
@@ -405,32 +435,22 @@
             });
         }
 
-        // Control functions
         function togglePlayPause() {
             if (!player) return;
-            
-            if (player.isPlaying()) {
-                player.pause();
-            } else {
-                player.play();
-            }
+            player.isPlaying() ? player.pause() : player.play();
         }
 
         function toggleMute() {
             if (!player) return;
-            
             const currentVolume = player.getVolume();
             const isMuted = currentVolume === 0;
-            
             player.setVolume(isMuted ? 100 : 0);
-            
             document.getElementById('volumeOnIcon').style.display = isMuted ? 'block' : 'none';
             document.getElementById('volumeOffIcon').style.display = isMuted ? 'none' : 'block';
         }
 
         function toggleFullscreen() {
             const container = document.querySelector('.player-container');
-            
             if (!document.fullscreenElement) {
                 if (container.requestFullscreen) {
                     container.requestFullscreen();
@@ -451,13 +471,10 @@
         }
 
         function goBack() {
-            if (player) {
-                player.destroy();
-            }
+            if (player) player.destroy();
             window.history.back();
         }
 
-        // UI functions
         function showLoading() {
             document.getElementById('loadingScreen').classList.remove('hidden');
         }
@@ -472,7 +489,6 @@
             document.getElementById('errorScreen').classList.add('show');
         }
 
-        // Controls visibility
         function showControls() {
             document.getElementById('topBar').classList.remove('hidden');
             document.getElementById('bottomControls').classList.remove('hidden');
@@ -491,7 +507,6 @@
             hideControlsTimeout = setTimeout(hideControls, 3000);
         }
 
-        // Event listeners
         document.getElementById('backBtn').addEventListener('click', goBack);
         document.getElementById('backBtn2').addEventListener('click', goBack);
         document.getElementById('playPauseBtn').addEventListener('click', togglePlayPause);
@@ -505,11 +520,9 @@
             }
         });
 
-        // Mouse/touch movement shows controls
         document.addEventListener('mousemove', resetHideControlsTimer);
         document.addEventListener('touchstart', resetHideControlsTimer);
 
-        // Click/tap on player toggles controls
         document.getElementById('player').addEventListener('click', () => {
             const topBar = document.getElementById('topBar');
             if (topBar.classList.contains('hidden')) {
@@ -521,7 +534,6 @@
             }
         });
 
-        // Keyboard controls
         document.addEventListener('keydown', (e) => {
             switch(e.key) {
                 case 'Escape':
@@ -548,20 +560,30 @@
             }
         });
 
-        // Initialize
-        currentChannel = loadChannelData();
-        
-        if (currentChannel) {
-            document.getElementById('channelTitle').textContent = currentChannel.title;
-            document.title = `${currentChannel.title} - Sun Network`;
-            initializePlayer(currentChannel);
-        } else {
-            showError('Channel data not available');
-        }
-
-        // Show controls initially
-        showControls();
-        hideControlsTimeout = setTimeout(hideControls, 3000);
+        // Initialize: Get channel ID from URL, fetch encrypted data, decrypt and play
+        (async function init() {
+            const params = new URLSearchParams(window.location.search);
+            const channelId = params.get('id');
+            
+            if (!channelId) {
+                showError('No channel selected');
+                return;
+            }
+            
+            // Fetch encrypted channel data and decrypt it
+            currentChannel = await loadChannelData(channelId);
+            
+            if (currentChannel) {
+                document.getElementById('channelTitle').textContent = currentChannel.title;
+                document.title = `${currentChannel.title} - Sun Network`;
+                initializePlayer(currentChannel);
+            } else {
+                showError('Channel data not available');
+            }
+            
+            showControls();
+            hideControlsTimeout = setTimeout(hideControls, 3000);
+        })();
     </script>
 </body>
 </html>
