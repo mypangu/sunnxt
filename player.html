@@ -473,11 +473,12 @@ async function toggleFullscreen() {
             await container.mozRequestFullScreen();
         }
         
-        // Enable stretch mode and lock to landscape
-        if (player) {
-            player.configure({
-                stretch: true
-            });
+        // Force video to stretch/fill screen
+        const videoElement = document.querySelector('video');
+        if (videoElement) {
+            videoElement.style.objectFit = 'fill'; 
+            videoElement.style.width = '100%';
+            videoElement.style.height = '100%';
         }
         
         // Lock orientation to landscape
@@ -496,6 +497,12 @@ async function toggleFullscreen() {
             await document.webkitExitFullscreen();
         } else if (document.mozCancelFullScreen) {
             await document.mozCancelFullScreen();
+        }
+        
+        // Reset video sizing
+        const videoElement = document.querySelector('video');
+        if (videoElement) {
+            videoElement.style.objectFit = 'contain';
         }
         
         // Unlock orientation (will go back to portrait)
