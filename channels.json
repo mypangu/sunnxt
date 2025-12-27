@@ -6,7 +6,7 @@
                 "channel": "Entertainment",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_TV_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream2/19ee29194c4d4fc286c3e697362e60cd/SunTVHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream2.sunnxt.com/803a6a4872a449a193b5846b5d101359/SunTVHD_P_IN_index.mpd"
             },
             {
                 "id": "suntv",
@@ -14,7 +14,7 @@
                 "channel": "Entertainment",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/05b5df1221764bca9867054c5e65ee62/SunTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream1.sunnxt.com/83c3f9aa91eb425aa899cd7d5f62f4cb/SunTV_IN_index.mpd"
             },
             {
                 "id": "ktv_hd",
@@ -22,7 +22,7 @@
                 "channel": "Music",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/KTV_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/61477b4c8d8d45d5a49e044cc1dffc60/KTVHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/1c406d282d7446349fcc0f4a1b2180d7/KTVHD_P_IN_index.mpd"
             },
             {
                 "id": "ktv",
@@ -30,7 +30,7 @@
                 "channel": "Music",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/KTV_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/6ae70edd4c1440379f5311e8fbddc7c1/KTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/328190ac960b4aacb94e5475747875b7/KTV_IN_index.mpd"
             },
             {
                 "id": "sunmusic_hd",
@@ -38,7 +38,7 @@
                 "channel": "Music",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_Music_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/d434796d90fa4dc9b7ecfacedbe683f1/SunMusicHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/f6f92acd2b4f4870aabf04b274c69376/SunMusicHD_P_IN_index.mpd"
             },
             {
                 "id": "sunmusic",
@@ -46,7 +46,7 @@
                 "channel": "Music",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_Music.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/585bb66e95c84ccea3f828c96b3567b5/SunMusicB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/168833cab00b4850be1a036c5c5e9850/SunMusic_IN_index.mpd"
             },
             {
                 "id": "adithya_tv",
@@ -54,7 +54,7 @@
                 "channel": "Entertainment",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Adithya_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/4d0eb3cde30247ada4ade679fdfbaf86/AdithyaTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/b1865a87b7384835aee1a02038bce2ef/AdithyaTV_IN_index.mpd"
             },
             {
                 "id": "sunlife",
@@ -62,7 +62,7 @@
                 "channel": "Lifestyle",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_Life.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/6b79451f54284b3fb680fd717ee008dc/SunLifeB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/c7d23c2ad1084c9794498e51158a2158/SunLife_IN_index.mpd"
             },
             {
                 "id": "chuttitv",
@@ -70,7 +70,7 @@
                 "channel": "Kids",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Chutti_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/e3eccb3f250a4ca8826e42914b2322a6/ChuttiTV_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/e3eccb3f250a4ca8826e42914b2322a6/ChuttiTV_IN_index.mpd"
             },
             {
                 "id": "gemini_tv_hd",
@@ -78,7 +78,7 @@
                 "channel": "Entertainment",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_TV_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream14/e778d9c98488494b9c9b38f9c48b63ec/GeminiTVHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream14.sunnxt.com/6a5c3dbb8b6044f8be835e13a815f40b/GeminiTVHD_P_IN_index.mpd"
             },
             {
                 "id": "gemini_tv",
@@ -86,7 +86,7 @@
                 "channel": "Entertainment",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream4/a1a61fa1811c4d20a5c2d5e14cdc0cd2/GeminiTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream4.sunnxt.com/3317421d8c2d4d2c900b79b61c7d9d95/GeminiTV_IN_index.mpd"
             },
             {
                 "id": "gemini_movies_hd",
@@ -94,7 +94,7 @@
                 "channel": "Movies",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Movies_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd"
+                "stream": "https://sunnorestrict.keralive.workers.dev/livestream/ec0d4961a002442295f91efc9d675c9d/GeminiMoviesHDB_IN_index.mpd"
             },
             {
                 "id": "gemini_movies",
@@ -102,7 +102,7 @@
                 "channel": "Movies",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Movies.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/6a59979ff0044fd3b6e0cb85d6f44432/GeminiMoviesB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/8fc1247bb1a24a21b45f2635eda1dc07/GeminiMovies_IN_index.mpd"
             },
             {
                 "id": "gemini_music_hd",
@@ -110,7 +110,7 @@
                 "channel": "Music",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Music_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/6a6520e446604c6e9840e5bf3a3a7d95/GeminiMusicHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/3a9f4a8ecfee4d99aca372b763943c72/GeminiMusicHD_P_IN_index.mpd"
             },
             {
                 "id": "gemini_music",
@@ -118,7 +118,7 @@
                 "channel": "Music",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Music.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/52b94f70c6e64692b2497f5023b629cd/GeminiMusicB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/565bc045df62411fba013c41cbb5f4c2/GeminiMusic_IN_index.mpd"
             },
             {
                 "id": "gemini_comedy",
@@ -126,7 +126,7 @@
                 "channel": "Entertainment",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Comedy.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/167c40e9521b470b87b4cf921fd0e146/GeminiComedyB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/b7f0913638684933ae78f7abc79baa20/GeminiComedy_IN_index.mpd"
             },
             {
                 "id": "gemini_life",
@@ -134,7 +134,7 @@
                 "channel": "Lifestyle",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Gemini_Life.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/a4b4f71a8b4344f3a280e906657a517a/GeminiLifeB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/af3c022825d04c21a532d80c370a42d2/GeminiLife_IN_index.mpd"
             },
             {
                 "id": "kushi_tv",
@@ -142,7 +142,7 @@
                 "channel": "Kids",
                 "language": "Telugu",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Kushi_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/b24f908d8104462db019c91dac6512a3/KushiTV_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/b24f908d8104462db019c91dac6512a3/KushiTV_IN_index.mpd"
             },
             {
                 "id": "surya_tv_hd",
@@ -150,7 +150,7 @@
                 "channel": "Entertainment",
                 "language": "Malayalam",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Surya_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream15/d719fad367614ee5baad747822767ad8/SuryaTVHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream15.sunnxt.com/54ce8446ac9e412591bba4de574760d5/SuryaTVHD_P_IN_index.mpd"
             },
             {
                 "id": "surya_tv",
@@ -158,7 +158,7 @@
                 "channel": "Entertainment",
                 "language": "Malayalam",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Surya_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream6/30612a1b269d4a18aa14657641c47515/SuryaTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream6.sunnxt.com/291e70c33516425da1c78c90e08e9f89/SuryaTV_IN_index.mpd"
             },
             {
                 "id": "surya_movies",
@@ -166,7 +166,7 @@
                 "channel": "Movies",
                 "language": "Malayalam",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Movies.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/e24ee14c395945bd8ccb065e1bce8b9b/SuryaMoviesB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/e3b12a222dd341d8b64e2d2ec3432d31/SuryaMovies_IN_index.mpd"
             },
             {
                 "id": "surya_music",
@@ -174,7 +174,7 @@
                 "channel": "Music",
                 "language": "Malayalam",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Music.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/8c2352ff54954e7b9a4188045dcf3b27/SuryaMusicB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/e18abccfb07049ee83a79c8a38fe159a/SuryaMusic_IN_index.mpd"
             },
             {
                 "id": "surya_comedy",
@@ -182,7 +182,7 @@
                 "channel": "Entertainment",
                 "language": "Malayalam",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Surya_Comedy.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/6505e922bf164423ad122f404747356a/SuryaComedyB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/074cc4c933d645eda0260950f3ce4f7b/SuryaComedy_IN_index.mpd"
             },
             {
                 "id": "kochu_tv",
@@ -190,7 +190,7 @@
                 "channel": "Kids",
                 "language": "Malayalam",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Kochu_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/1893b9ab790747cb80a584873a608dcb/KochuTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/822c2d513c6e4236859292d9a6b209ec/KochuTV_IN_index.mpd"
             },
             {
                 "id": "udaya_hd",
@@ -198,7 +198,7 @@
                 "channel": "Entertainment",
                 "language": "Kannada",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream16/a8d28f18944c4946ad7133938860e7cf/UdayaTVHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream16.sunnxt.com/3a36700e8a904726b253cf6873bfaf40/UdayaTVHD_P_IN_index.mpd"
             },
             {
                 "id": "udaya_tv",
@@ -206,7 +206,7 @@
                 "channel": "Entertainment",
                 "language": "Kannada",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream5/e2f36b5d0be74780a041a8f5b65bc7e6/UdayaTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream5.sunnxt.com/a14a058171cb46b49c38ddbb80cd71fe/UdayaTV_IN_index.mpd"
             },
             {
                 "id": "udaya_movies",
@@ -214,7 +214,7 @@
                 "channel": "Movies",
                 "language": "Kannada",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Movies.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/1c02547243c041eea5dab1c343018e90/UdayaMoviesB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/c4d973ab48d84c109695a7fd57164d87/UdayaMovies_IN_index.mpd"
             },
             {
                 "id": "udaya_music",
@@ -222,7 +222,7 @@
                 "channel": "Music",
                 "language": "Kannada",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Music.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/17ecf8decebe416cabfc1060981837f7/UdayaMusic_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/17ecf8decebe416cabfc1060981837f7/UdayaMusic_IN_index.mpd"
             },
             {
                 "id": "udaya_comedy",
@@ -230,7 +230,7 @@
                 "channel": "Entertainment",
                 "language": "Kannada",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Udaya_Comedy.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/8a3d3d8d679b4f9f83a8305b4ead0644/UdayaComedyB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/037a75604a2c4ae1b494409eef2e6033/UdayaComedy_IN_index.mpd"
             },
             {
                 "id": "chintu_tv",
@@ -238,7 +238,7 @@
                 "channel": "Kids",
                 "language": "Kannada",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Chintu_TV.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream/ed4c67ad957644b69361651d9101107e/ChintuTVB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/29a1b9de2fbc44d0ac8f569328733f3f/ChintuTV_IN_index.mpd"
             },
             {
                 "id": "sun_bangla",
@@ -246,7 +246,7 @@
                 "channel": "Entertainment",
                 "language": "Bengali",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_Bangla.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream7/bf76ee92dd01473bb2eb57d137294484/SunBanglaB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream7.sunnxt.com/9876418f56d048879014e243fc0cf2d9/SunBangla_IN_index.mpd"
             },
             {
                 "id": "sun_marathi",
@@ -254,7 +254,7 @@
                 "channel": "Entertainment",
                 "language": "Marathi",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_Marathi.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream9/b0aacde03b744564870634ecb10e8a31/SunMarathiB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream9.sunnxt.com/350cc0a44cdb400a8110de68afd85161/SunMarathi_IN_index.mpd"
             },
             {
                 "id": "sun_neo_hd",
@@ -262,7 +262,7 @@
                 "channel": "Entertainment",
                 "language": "Hindi",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Bangla_HD.png",
-                "stream": "https://southlive.porus-in2012.workers.dev/https://white-paper-38cb.keralive.workers.dev/livestream8/248c92b73514435686fd72ba325d4008/SunNeoHDB_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream8.sunnxt.com/2082ee4606184c17943d48478136f244/SunNeoHD_P_IN_index.mpd"
             }
 	]		
 }	
