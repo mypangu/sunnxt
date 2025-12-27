@@ -6,7 +6,7 @@
                 "channel": "Entertainment",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_TV_HD.png",
-                "stream": "https://sunnxt.panguplay.workers.dev/proxy/https://livestream2.sunnxt.com/803a6a4872a449a193b5846b5d101359/SunTVHD_P_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream2.sunnxt.com/803a6a4872a449a193b5846b5d101359/SunTVHD_P_IN_index.mpd"
             },
             {
                 "id": "suntv",
@@ -14,7 +14,7 @@
                 "channel": "Entertainment",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_TV.png",
-                "stream": "https://sunnxt.panguplay.workers.dev/proxy/https://livestream1.sunnxt.com/83c3f9aa91eb425aa899cd7d5f62f4cb/SunTV_IN_index.mpd"
+                "stream": "https://cors-proxy.cooks.fyi/https://livestream1.sunnxt.com/83c3f9aa91eb425aa899cd7d5f62f4cb/SunTV_IN_index.mpd"
             },
             {
                 "id": "ktv_hd",
