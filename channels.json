@@ -6,7 +6,7 @@
                 "channel": "Entertainment",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_TV_HD.png",
-                "stream": "https://cors-proxy.porus-in2012.workers.dev/https://livestream2.sunnxt.com/803a6a4872a449a193b5846b5d101359/SunTVHD_P_IN_index.mpd"
+                "stream": "https://cors-proxy.porus-in2012.workers.dev/?url=https://livestream2.sunnxt.com/803a6a4872a449a193b5846b5d101359/SunTVHD_P_IN_index.mpd"
             },
             {
                 "id": "suntv",
@@ -14,7 +14,7 @@
                 "channel": "Entertainment",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/Sun_TV.png",
-                "stream": "https://cors-proxy.porus-in2012.workers.dev/https://livestream1.sunnxt.com/83c3f9aa91eb425aa899cd7d5f62f4cb/SunTV_IN_index.mpd"
+                "stream": "https://cors-proxy.porus-in2012.workers.dev/?url=https://livestream1.sunnxt.com/83c3f9aa91eb425aa899cd7d5f62f4cb/SunTV_IN_index.mpd"
             },
             {
                 "id": "ktv_hd",
@@ -22,7 +22,7 @@
                 "channel": "Music",
                 "language": "Tamil",
                 "logo": "https://jiotvimages.cdn.jio.com/dare_images/images/KTV_HD.png",
-                "stream": "https://cors-proxy.cooks.fyi/https://livestream.sunnxt.com/1c406d282d7446349fcc0f4a1b2180d7/KTVHD_P_IN_index.mpd"
+                "stream": "https://cors-proxy.porus-in2012.workers.dev/?url=https://livestream.sunnxt.com/1c406d282d7446349fcc0f4a1b2180d7/KTVHD_P_IN_index.mpd"
             },
             {
                 "id": "ktv",
