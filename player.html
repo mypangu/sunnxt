@@ -461,32 +461,53 @@
             document.getElementById('volumeOffIcon').style.display = isMuted ? 'none' : 'block';
         }
 
-        function toggleFullscreen() {
-            const container = document.querySelector('.player-container');
-            if (!document.fullscreenElement) {
-                if (container.requestFullscreen) {
-                    container.requestFullscreen();
-                } else if (container.webkitRequestFullscreen) {
-                    container.webkitRequestFullscreen();
-                } else if (container.mozRequestFullScreen) {
-                    container.mozRequestFullScreen();
-                }
-                // Enable stretch mode when entering fullscreen
+async function toggleFullscreen() {
+    const container = document.querySelector('.player-container');
+    if (!document.fullscreenElement) {
+        // Entering fullscreen
+        if (container.requestFullscreen) {
+            await container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+            await container.webkitRequestFullscreen();
+        } else if (container.mozRequestFullScreen) {
+            await container.mozRequestFullScreen();
+        }
+        
+        // Enable stretch mode and lock to landscape
         if (player) {
             player.configure({
                 stretch: true
             });
         }
-            } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) {
-                    document.webkitExitFullscreen();
-                } else if (document.mozCancelFullScreen) {
-                    document.mozCancelFullScreen();
-                }
+        
+        // Lock orientation to landscape
+        try {
+            if (screen.orientation && screen.orientation.lock) {
+                await screen.orientation.lock('landscape');
             }
+        } catch (error) {
+            console.log('Orientation lock not supported:', error);
         }
+    } else {
+        // Exiting fullscreen
+        if (document.exitFullscreen) {
+            await document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+            await document.webkitExitFullscreen();
+        } else if (document.mozCancelFullScreen) {
+            await document.mozCancelFullScreen();
+        }
+        
+        // Unlock orientation (will go back to portrait)
+        try {
+            if (screen.orientation && screen.orientation.unlock) {
+                screen.orientation.unlock();
+            }
+        } catch (error) {
+            console.log('Orientation unlock not supported:', error);
+        }
+    }
+}
 
         function goBack() {
             if (player) player.destroy();
@@ -552,23 +573,32 @@
     }
 });
 
-        // Double tap for fullscreen
+// Double tap for fullscreen with landscape
 let lastTap = 0;
-document.getElementById('playerOverlay').addEventListener('touchend', (e) => {
+document.getElementById('playerOverlay').addEventListener('touchend', async (e) => {
     const currentTime = new Date().getTime();
     const tapLength = currentTime - lastTap;
     if (tapLength < 300 && tapLength > 0) {
         e.preventDefault();
-        toggleFullscreen();
-        // Set stretch mode for fill
-        if (player) {
-            player.configure({
-                stretch: true
-            });
-        }
+        await toggleFullscreen();
     }
     lastTap = currentTime;
 });
+
+// Listen for orientation changes to sync with fullscreen
+screen.orientation?.addEventListener('change', () => {
+    const isLandscape = screen.orientation.type.includes('landscape');
+    const isFullscreen = !!document.fullscreenElement;
+    
+    // If landscape but not fullscreen, enter fullscreen
+    if (isLandscape && !isFullscreen) {
+        toggleFullscreen();
+    }
+    // If portrait but in fullscreen, exit fullscreen
+    else if (!isLandscape && isFullscreen) {
+        toggleFullscreen();
+    }
+});        
 
         document.addEventListener('keydown', (e) => {
             switch(e.key) {
